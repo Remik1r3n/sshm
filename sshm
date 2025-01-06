@@ -1,0 +1,14 @@
+#!/bin/bash
+# Wrapper script for sshm
+
+# Set the path to sshm.sh
+SSHM_SH=/usr/share/sshm/sshm.sh
+
+# Check if sshm.sh exists
+if [ ! -f $SSHM_SH ]; then
+    echo "Error: $SSHM_SH not found"
+    exit 1
+fi
+
+# Run sshm.sh
+$SSHM_SH $@
